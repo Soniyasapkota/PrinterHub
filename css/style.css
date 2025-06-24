@@ -1,0 +1,281 @@
+/* Variables */
+
+:root {
+  --safe-padding-x: 155px;
+  --safe-width: 1066px;
+
+  /* Colors */
+  --primary-color: #003366;
+  --secondary-color: #dc143c;
+}
+
+/* CSS Reset */
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+}
+
+.safe-margin {
+  max-width: var(--safe-width);
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 5px;
+}
+
+/*
+================
+|| Components ||
+================
+*/
+
+.btn {
+  font-size: 13px;
+  font-weight: 600;
+  width: max-content;
+}
+
+.btn-bg-white {
+  text-transform: uppercase;
+  padding: 6px 14px;
+  color: black;
+  background-color: white;
+  transition: background-color 0.1s linear;
+}
+
+.btn-bg-white:hover {
+  background-color: #eeeeee;
+}
+
+.btn-bg-transparent {
+  text-transform: uppercase;
+}
+
+.title {
+  font-size: 32px;
+  font-weight: 200;
+  margin: 40px 0;
+}
+
+/*
+============
+|| Header ||
+============
+*/
+
+/* Sale banner */
+
+.sale-banner {
+  color: white;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.sale-banner .sale-title {
+  font-size: 22px;
+  font-weight: bold;
+  text-wrap: nowrap;
+}
+
+.sale-banner .info {
+  font-size: 11px;
+}
+
+.sale-banner .sale-counter {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.sale-banner .shop-btn {
+  border: 1px solid white;
+  border-radius: 4px;
+  padding: 3px 12px;
+  font-size: 14px;
+}
+
+.sale-banner .counter {
+  display: flex;
+  align-items: center;
+  gap: 3px;
+}
+
+.sale-banner .counter .entry {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+}
+
+.sale-banner .counter .sep {
+  margin-bottom: 12px;
+}
+
+.sale-banner .counter .unit {
+  font-size: 11px;
+}
+
+/* Navigation bar */
+
+.navigation-bar {
+  margin: 7px auto;
+  display: flex;
+  align-items: center;
+  gap: 42px;
+}
+
+.navigation-bar .links {
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.navigation-bar .search-cart {
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.navigation-bar .search-input {
+  padding: 2px 4px;
+}
+
+.link-entry:hover .anchor,
+.links a:hover {
+  color: #003366;
+  text-shadow: 1px 0 0; /* Text shadow because making text bold will shift contents of the div */
+}
+
+.links .link-hover-container {
+  pointer-events: none;
+  opacity: 0;
+  position: absolute;
+  z-index: 999;
+  transition:
+    opacity 0.2s,
+    padding-top 0.2s;
+}
+
+.links .link-hover-div {
+  border: rgb(201, 200, 200) 1px solid;
+  margin-top: 10px;
+  padding: 12px;
+  background-color: white;
+  box-shadow: 5px 7px 5px 0px rgba(0, 0, 0, 0.08);
+
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.links .link-hover-div .section-entry {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+
+.links .link-hover-div .section-entry a {
+  flex: 1;
+}
+
+.links .link-hover-div .section-entry img {
+  height: 36px;
+  width: auto;
+}
+
+.links .link-entry:hover .link-hover-container {
+  pointer-events: all;
+  opacity: 0.8;
+  padding-top: 6px;
+}
+
+.links .link-entry .link-hover-container:hover {
+  opacity: 1;
+}
+
+/*
+============
+|| Footer ||
+============
+*/
+
+footer {
+  background-color: #f0f2f4;
+  padding: 48px 0;
+  color: var(--primary-color);
+}
+
+footer .content {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+footer .content .logo-bar {
+  display: flex;
+  gap: 78px;
+}
+
+footer .logo {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+}
+
+footer .links {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  font-size: 13px;
+  flex-grow: 1;
+}
+
+footer .email {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  font-size: 13px;
+}
+
+footer .email .email-input {
+  border: 0;
+  background: transparent;
+  border-bottom: 1px solid var(--primary-color);
+  padding: 4px;
+}
+
+footer .email .email-input::placeholder {
+  color: var(--primary-color);
+  opacity: 0.7;
+}
+
+footer .email form {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+footer .email form .btn-submit {
+  align-self: flex-start;
+  background-color: transparent;
+  padding: 2px 5px;
+  border: 1px solid var(--primary-color);
+}

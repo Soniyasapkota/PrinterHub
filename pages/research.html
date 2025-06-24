@@ -1,0 +1,630 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/style.css" />
+    <title>S3 Printers - Research</title>
+    <meta name="description" content="Research page" />
+    <meta name="keywords" content="Printers" />
+    <meta name="author" content="S3 Printers" />
+    <style>
+      .title-heading {
+        font-size: 40px;
+        font-weight: 300;
+      }
+
+      .title-description {
+        font-size: 14px;
+        padding: 16px 0;
+      }
+
+      .page-title {
+        display: list-item;
+        list-style-position: inside;
+        margin-top: 32px;
+        margin-bottom: 16px;
+        font-size: 28px;
+        font-weight: 300;
+      }
+
+      .images-comparison {
+        display: flex;
+        gap: 16px;
+        margin-top: 24px;
+      }
+
+      .images-comparison figure {
+        flex: 1;
+      }
+
+      .images-comparison img {
+        object-fit: contain;
+        margin-bottom: auto;
+      }
+
+      figcaption {
+        text-align: center;
+        font-size: 13px;
+      }
+
+      figcaption::before {
+        content: "Figure: ";
+      }
+
+      .ext-link {
+        text-decoration: underline;
+        font-size: 13px;
+        margin: 12px 0;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Header -->
+    <header>
+      <!-- Sale banner -->
+      <div style="background-color: #db133b">
+        <div class="safe-margin sale-banner">
+          <p class="sale-title">Print Perfection Sale</p>
+          <p class="info">
+            Limitless Creativity with Our Printer Extravaganza! Unbeatable Deals
+            Await – Elevate Your Printing Experience Today. Hurry, It's Printer
+            Perfection at Prices You Can't Resists! 🖨️✨ #PrintPerfectionSale
+          </p>
+          <a href="/pages/products.html">
+            <div class="shop-btn">
+              <p>Shop</p>
+            </div>
+          </a>
+          <div class="counter">
+            <div class="entry">
+              <p id="sale-countdown-hours">20</p>
+              <p class="unit">HRS</p>
+            </div>
+            <p class="sep">:</p>
+            <div class="entry">
+              <p id="sale-countdown-minutes">28</p>
+              <p class="unit">MIN</p>
+            </div>
+            <p class="sep">:</p>
+            <div class="entry">
+              <p id="sale-countdown-seconds">35</p>
+              <p class="unit">SEC</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Navigation bar -->
+      <div class="safe-margin navigation-bar">
+        <a href="/"
+          ><img src="/images/logo.png" width="50" height="50" alt="Logo"
+        /></a>
+
+        <div class="links">
+          <div class="link-entry">
+            <a href="/" class="anchor">Home</a>
+            <div class="link-hover-container">
+              <div class="link-hover-div">
+                <div class="section-entry">
+                  <a href="/#massive-discounts">Massive discounts!</a>
+                  <img
+                    src="/images/navbar/homepage-massive-discounts.png"
+                    alt="Massive discounts"
+                  />
+                </div>
+                <div class="section-entry">
+                  <a href="/#printers-for-home-and-office"
+                    >Printers for home and office</a
+                  >
+                  <img
+                    src="/images/printers/canon-mg2570s-3-in-1-multi-function-inkjet-color-printer.png"
+                    alt="Canon printer"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="link-entry">
+            <a href="/pages/blog.html" class="anchor">Blog</a>
+            <div class="link-hover-container">
+              <div class="link-hover-div">
+                <div class="section-entry">
+                  <a href="/pages/blogs/technology.html">Technology</a>
+                  <img
+                    src="/images/blog-page/technology.jpg"
+                    alt="Technology"
+                  />
+                </div>
+                <div class="section-entry">
+                  <a href="/pages/blogs/positive-effects-of-technology.html"
+                    >Positive Effects of technology</a
+                  >
+                  <img
+                    src="/images/blog-page/positive-impact-of-technology.png"
+                    alt="Positive Impact of technology"
+                  />
+                </div>
+                <div class="section-entry">
+                  <a href="/pages/blogs/negative-effects-of-technology.html"
+                    >Negative Effects of technology</a
+                  >
+                  <img
+                    src="/images/blog-page/negative-impacts-of-tecchnology.jpg"
+                    alt="Negative Impacts of technology"
+                  />
+                </div>
+                <a href="/pages/blog.html" style="margin-top: 10px">View All</a>
+              </div>
+            </div>
+          </div>
+          <div class="link-entry">
+            <a href="/pages/products.html" class="anchor">Products</a>
+            <div class="link-hover-container">
+              <div class="link-hover-div">
+                <div class="section-entry">
+                  <a
+                    href="/pages/product/canon-mg2570s-3-in-1-multi-function-inkjet-color-printer.html"
+                    >Canon MG2570S</a
+                  >
+                  <img
+                    src="/images/printers/canon-mg2570s-3-in-1-multi-function-inkjet-color-printer.png"
+                    alt="Canon printer"
+                  />
+                </div>
+                <div class="section-entry">
+                  <a
+                    href="/pages/product/hp-415-all-in-one-ink-tank-wireless-color-printer.html"
+                    >HP 415 All-in-One</a
+                  >
+                  <img
+                    src="/images/printers/hp-415-all-in-one-ink-tank-wireless-color-printer.png"
+                    alt="HP 415 All-in-One"
+                  />
+                </div>
+                <div class="section-entry">
+                  <a
+                    href="/pages/product/canon-pixma-g3020-3-in-1-wireless-multi-function-ink-tank-color-printer.html"
+                    >Canon Pixma G3020 3 in 1 Wireless</a
+                  >
+                  <img
+                    src="/images/printers/canon-pixma-g3020-3-in-1-wireless-multi-function-ink-tank-color-printer.png"
+                    alt="Canon printer"
+                  />
+                </div>
+                <a href="/pages/products.html" style="margin-top: 10px"
+                  >View All</a
+                >
+              </div>
+            </div>
+          </div>
+          <a href="/pages/research.html" class="anchor">Research</a>
+          <div class="link-entry">
+            <a href="/pages/about-us.html" class="anchor">About Us</a>
+            <div class="link-hover-container">
+              <div class="link-hover-div">
+                <div class="section-entry">
+                  <a href="/pages/about-us.html#meet-the-team">Meet the team</a>
+                  <img
+                    src="/images/navbar/about-us-our-team.png"
+                    alt="About Us - Team"
+                  />
+                </div>
+                <div class="section-entry">
+                  <a href="/pages/about-us.html#our-story">Our story</a>
+                  <img
+                    src="/images/navbar/about-us-story.png"
+                    alt="About Us - Story"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+          <a href="/pages/about-our-company.html" class="anchor"
+            >About Our Company</a
+          >
+          <a href="/pages/ink-finder.html" class="anchor">Ink Finder</a>
+        </div>
+      </div>
+    </header>
+
+    <!-- Content of the page -->
+    <main>
+      <div class="safe-margin" style="padding: 42px 0">
+        <h1 class="title-heading">Research</h1>
+        <p class="title-description">
+          Explore the foundation of our website design. Here, we've listed all
+          the sources and inspirations that guided the creation of our website.
+        </p>
+
+        <!-- Homepage -->
+        <h2 class="page-title">Homepage</h2>
+        <p>
+          For the homepage, we took inspirations from epson and HP printers
+          homepage. The sale and advertisement banners were inspired by those on
+          the epson printers website. And the printers list component was
+          inspired by the printers list componenent on HP printers homepage.
+        </p>
+        <p class="ext-link">
+          <a href="https://epson.com/usa">Epson homepage</a>
+        </p>
+        <table class="images-comparison" border="1">
+          <tr>
+            <td>
+              <figure>
+                <img
+                  src="../images/research/homepage-epson.png"
+                  alt="Homepage Epson"
+                  style="width: 100%; height: auto"
+                />
+                <figcaption>Epson homepage banners</figcaption>
+              </figure>
+            </td>
+            <td>
+              <figure>
+                <img
+                  src="../images/research/homepage-s3.png"
+                  alt="Homepage S3"
+                  style="width: 100%; height: auto"
+                />
+                <figcaption>S3 printers homepage banners</figcaption>
+              </figure>
+            </td>
+          </tr>
+        </table>
+        <table class="images-comparison" border="1">
+          <tr>
+            <td>
+              <figure>
+                <img
+                  src="../images/research/homepage-hp-printers-list.png"
+                  alt="Homepage Epson"
+                  style="width: 100%; height: auto"
+                />
+                <figcaption>HP homepage printers list</figcaption>
+              </figure>
+            </td>
+            <td>
+              <figure>
+                <img
+                  src="../images/research/homepage-s3-printers-list.png"
+                  alt="Homepage S3"
+                  style="width: 100%; height: auto"
+                />
+                <figcaption>S3 homepage printers list</figcaption>
+              </figure>
+            </td>
+          </tr>
+        </table>
+
+        <!-- Blogs page -->
+        <h2 class="page-title">Blogs page</h2>
+        <p>
+          For the blogs page, we took ideas from the popular coures section of
+          standford online website.
+        </p>
+        <p class="ext-link">
+          <a
+            href="https://learn.stanford.edu/Reddit-LP-AI-OA-Inquiry.html?rdt_cid=4773277065438946054"
+            >Standford popular courses page</a
+          >
+        </p>
+        <table class="images-comparison" border="1">
+          <tr>
+            <td>
+              <figure>
+                <img
+                  src="../images/research/blogs-cards-stanford.png"
+                  alt="Homepage Epson"
+                  style="width: 100%; height: auto"
+                />
+                <figcaption>Standford courses card</figcaption>
+              </figure>
+            </td>
+            <td>
+              <figure>
+                <img
+                  src="../images/research/blogs-cards-s3.png"
+                  alt="Homepage S3"
+                  style="width: 100%; height: auto"
+                />
+                <figcaption>S3 printers blogs card</figcaption>
+              </figure>
+            </td>
+          </tr>
+        </table>
+
+        <!-- Products list -->
+        <h2 class="page-title">Products list</h2>
+        <p>
+          For the homepage, we took inspirations from epson and HP printers
+          homepage. The sale and advertisement banners were inspired by those on
+          the epson printers website. And the printers list component was
+          inspired by the printers list componenent on HP printers homepage.
+        </p>
+        <p class="ext-link">
+          <a href="https://www.xerox.com/en-us/office/printers"
+            >Xerox products list</a
+          >
+        </p>
+        <table class="images-comparison" border="1">
+          <tr>
+            <td>
+              <figure>
+                <img
+                  src="../images/research/xerox-products.png"
+                  alt="Homepage Epson"
+                  style="width: 100%; height: auto"
+                />
+                <figcaption>Xerox products page</figcaption>
+              </figure>
+            </td>
+            <td>
+              <figure>
+                <img
+                  src="../images/research/products-s3.png"
+                  alt="Homepage S3"
+                  style="width: 100%; height: auto"
+                />
+                <figcaption>S3 printers products page</figcaption>
+              </figure>
+            </td>
+          </tr>
+        </table>
+        <table class="images-comparison" border="1">
+          <tr>
+            <td>
+              <figure>
+                <img
+                  src="../images/research/xerox-products-grid.png"
+                  alt="Homepage Epson"
+                  style="width: 100%; height: auto"
+                />
+                <figcaption>Xerox products page - grid view</figcaption>
+              </figure>
+            </td>
+            <td>
+              <figure>
+                <img
+                  src="../images/research/products-s3-grid.png"
+                  alt="Homepage S3"
+                  style="width: 100%; height: auto"
+                />
+                <figcaption>S3 printers products page - grid view</figcaption>
+              </figure>
+            </td>
+          </tr>
+        </table>
+
+        <!-- Product Details -->
+        <h2 class="page-title">Product Details</h2>
+        <p>
+          For the product details page, we took inspirations from xerox printers
+          detail page. The layout and the theme of the page is similar to that
+          of the xerox printers. As a bonus, we have added a review section
+          which uses javascript to dynamically edit the page content and thus
+          simulating review submission.
+        </p>
+        <p class="ext-link">
+          <a
+            href="https://www.xerox.com/en-us/office/multifunction-printers/xerox-b225-multifunction-printer"
+            >Xerox product details page</a
+          >
+        </p>
+        <table class="images-comparison" border="1">
+          <tr>
+            <td>
+              <figure>
+                <img
+                  src="../images/research/product-details-xerox.png"
+                  alt="Homepage Epson"
+                  style="width: 100%; height: auto"
+                />
+                <figcaption>Xerox product details</figcaption>
+              </figure>
+            </td>
+            <td>
+              <figure>
+                <img
+                  src="../images/research/product-details-s3.png"
+                  alt="Homepage S3"
+                  style="width: 100%; height: auto"
+                />
+                <figcaption>S3 printers product details</figcaption>
+              </figure>
+            </td>
+          </tr>
+        </table>
+
+        <!-- About Us -->
+        <h2 class="page-title">About Us</h2>
+        <p>
+          When developing our website, we drew inspiration from Digital
+          Marmalade and were particularly captivated by their flip-card
+          function. We decided to create our own version, and also included a
+          timeline to showcase our company's journey, much like Digital
+          Marmalade's.
+        </p>
+        <p class="ext-link">
+          <a href="https://www.digitalmarmalade.co.uk/our-story"
+            >Digitalmarmalade our story page</a
+          >
+        </p>
+        <table class="images-comparison" border="1">
+          <tr>
+            <td>
+              <figure>
+                <img
+                  src="../images/research/about-us-digitalmarmalade.png"
+                  alt="Homepage Epson"
+                  style="width: 100%; height: auto"
+                />
+                <figcaption>Digitalmarmalade about us page</figcaption>
+              </figure>
+            </td>
+            <td>
+              <figure>
+                <img
+                  src="../images/research/about-us-s3.png"
+                  alt="Homepage S3"
+                  style="width: 100%; height: auto"
+                />
+                <figcaption>S3 printers about us page</figcaption>
+              </figure>
+            </td>
+          </tr>
+        </table>
+
+        <!-- About Our Company -->
+        <h2 class="page-title">About Our Company</h2>
+        <p>
+          In addition, we took inspiration from printer websites like Epson for
+          our company page. We studied their design elements, layout, and
+          overall aesthetic to gather ideas and create a professional-looking
+          page. By taking reference from these websites, we were able to create
+          a company page that is both visually appealing and informative for our
+          visitors.
+        </p>
+        <p class="ext-link">
+          <a href="https://epson.com/about-us">Epson's about our page</a>
+        </p>
+        <table class="images-comparison" border="1">
+          <tr>
+            <td>
+              <figure>
+                <img
+                  src="../images/research/about-our-company-epson.png"
+                  alt="Homepage Epson"
+                  style="width: 100%; height: auto"
+                />
+                <figcaption>Epson's about our company</figcaption>
+              </figure>
+            </td>
+            <td>
+              <figure>
+                <img
+                  src="../images/research/about-our-company-s3.png"
+                  alt="Homepage S3"
+                  style="width: 100%; height: auto"
+                />
+                <figcaption>S3 printers's about our company</figcaption>
+              </figure>
+            </td>
+          </tr>
+        </table>
+
+        <!-- Ink Finder -->
+        <h2 class="page-title">Ink Finder</h2>
+        <p>
+          During the development of our website, we were particularly impressed
+          by Epson's ink finder function, which allows customers to easily find
+          the right ink for their printer. We recognized the value of this
+          unique concept and decided to incorporate it into our own website. To
+          ensure accuracy and functionality, we invested time in gathering
+          information about various printer series and their corresponding model
+          numbers and ink type codes.
+        </p>
+        <p class="ext-link">
+          <a href="https://epson.com/InkFinder">Epson's ink finder page</a>
+        </p>
+        <table class="images-comparison" border="1">
+          <tr>
+            <td>
+              <figure>
+                <img
+                  src="../images/research/ink-finder-epson.png"
+                  alt="Homepage Epson"
+                  style="width: 100%; height: auto"
+                />
+                <figcaption>Epson's ink finder</figcaption>
+              </figure>
+            </td>
+            <td>
+              <figure>
+                <img
+                  src="../images/research/ink-finder-s3.png"
+                  alt="Homepage S3"
+                  style="width: 100%; height: auto"
+                />
+                <figcaption>S3 printers's ink finder</figcaption>
+              </figure>
+            </td>
+          </tr>
+        </table>
+      </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+      <div class="safe-margin content">
+        <!-- Logo + Links -->
+        <div class="logo-bar">
+          <div class="logo">
+            <img src="/images/logo.png" width="50" height="50" alt="Logo" />
+            <p style="font-size: 0.8em">S3 Printers</p>
+          </div>
+          <div class="links">
+            <p style="font-weight: 700">Links</p>
+            <div style="display: flex; gap: 42px">
+              <ul style="list-style: none">
+                <li><a href="/">Home</a></li>
+                <li><a href="/pages/blog.html">Blog</a></li>
+                <li><a href="/pages/products.html">Products</a></li>
+                <li><a href="/pages/research.html">Research</a></li>
+              </ul>
+              <ul style="list-style: none">
+                <li><a href="/pages/about-us.html">About Us</a></li>
+                <li>
+                  <a href="/pages/about-our-company.html">About Our Company</a>
+                </li>
+                <li><a href="/pages/ink-finder.html">Ink Finder</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="email">
+            <p
+              style="
+                font-weight: 700;
+                display: flex;
+                align-items: center;
+                gap: 8px;
+              "
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                height="16"
+                width="16"
+                viewBox="0 0 512 512"
+                fill="#003366"
+              >
+                <!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+                <path
+                  d="M48 64C21.5 64 0 85.5 0 112c0 15.1 7.1 29.3 19.2 38.4L236.8 313.6c11.4 8.5 27 8.5 38.4 0L492.8 150.4c12.1-9.1 19.2-23.3 19.2-38.4c0-26.5-21.5-48-48-48H48zM0 176V384c0 35.3 28.7 64 64 64H448c35.3 0 64-28.7 64-64V176L294.4 339.2c-22.8 17.1-54 17.1-76.8 0L0 176z"
+                />
+              </svg>
+              Stay up to date on the latest from S3 printers
+            </p>
+            <form onsubmit="return newsletterSignup()">
+              <input
+                class="email-input"
+                placeholder="Enter your email address"
+                type="email"
+                required
+              />
+              <button class="btn-submit">Sign Up</button>
+            </form>
+          </div>
+        </div>
+        <!-- Copyright info -->
+        <div style="display: flex; justify-content: center">
+          <p style="font-size: 11px">
+            &copy; 2023-2024 S3 Printers | All Rights Reserved
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Additional scripts: DO NOT DELETE! -->
+    <script src="../scripts/header.js"></script>
+    <script src="../scripts/footer.js"></script>
+  </body>
+</html>

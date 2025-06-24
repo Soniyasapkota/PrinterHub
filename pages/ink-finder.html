@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/style.css" />
+    <title>S3 Printers - Ink Finder</title>
+    <meta name="description" content="Ink finder" />
+    <meta name="keywords" content="Printers" />
+    <meta name="author" content="S3 Printers" />
+    <style>
+      #ink-name {
+        /* Output contents with proper line breaks */
+        white-space: pre-line;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <!-- Sale banner -->
+      <div style="background-color: #db133b">
+        <div class="safe-margin sale-banner">
+          <p class="sale-title">Print Perfection Sale</p>
+          <p class="info">
+            Limitless Creativity with Our Printer Extravaganza! Unbeatable Deals
+            Await – Elevate Your Printing Experience Today. Hurry, It's Printer
+            Perfection at Prices You Can't Resists! 🖨️✨ #PrintPerfectionSale
+          </p>
+          <a href="/pages/products.html">
+            <div class="shop-btn">
+              <p>Shop</p>
+            </div>
+          </a>
+          <div class="counter">
+            <div class="entry">
+              <p id="sale-countdown-hours">20</p>
+              <p class="unit">HRS</p>
+            </div>
+            <p class="sep">:</p>
+            <div class="entry">
+              <p id="sale-countdown-minutes">28</p>
+              <p class="unit">MIN</p>
+            </div>
+            <p class="sep">:</p>
+            <div class="entry">
+              <p id="sale-countdown-seconds">35</p>
+              <p class="unit">SEC</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Navigation bar -->
+      <div class="safe-margin navigation-bar">
+        <a href="/"
+          ><img src="/images/logo.png" width="50" height="50" alt="Logo"
+        /></a>
+
+        <div class="links">
+          <div class="link-entry">
+            <a href="/" class="anchor">Home</a>
+            <div class="link-hover-container">
+              <div class="link-hover-div">
+                <div class="section-entry">
+                  <a href="/#massive-discounts">Massive discounts!</a>
+                  <img
+                    src="/images/navbar/homepage-massive-discounts.png"
+                    alt="Massive discounts"
+                  />
+                </div>
+                <div class="section-entry">
+                  <a href="/#printers-for-home-and-office"
+                    >Printers for home and office</a
+                  >
+                  <img
+                    src="/images/printers/canon-mg2570s-3-in-1-multi-function-inkjet-color-printer.png"
+                    alt="Canon printer"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="link-entry">
+            <!-- Links to blog page-->
+            <a href="/pages/blog.html" class="anchor">Blog</a>
+            <div class="link-hover-container">
+              <div class="link-hover-div">
+                <div class="section-entry">
+                  <a href="/pages/blogs/technology.html">Technology</a>
+                  <img
+                    src="/images/blog-page/technology.jpg"
+                    alt="Technology"
+                  />
+                </div>
+                <div class="section-entry">
+                  <a href="/pages/blogs/positive-effects-of-technology.html"
+                    >Positive Effects of technology</a
+                  >
+                  <img
+                    src="/images/blog-page/positive-impact-of-technology.png"
+                    alt="Positive Impact of technology"
+                  />
+                </div>
+                <div class="section-entry">
+                  <a href="/pages/blogs/negative-effects-of-technology.html"
+                    >Negative Effects of technology</a
+                  >
+                  <img
+                    src="/images/blog-page/negative-impacts-of-tecchnology.jpg"
+                    alt="Negative Impacts of technology"
+                  />
+                </div>
+                <a href="/pages/blog.html" style="margin-top: 10px">View All</a>
+              </div>
+            </div>
+          </div>
+          <div class="link-entry">
+            <a href="/pages/products.html" class="anchor">Products</a>
+            <div class="link-hover-container">
+              <div class="link-hover-div">
+                <div class="section-entry">
+                  <!--Links to Product page-->
+                  <a
+                    href="/pages/product/canon-mg2570s-3-in-1-multi-function-inkjet-color-printer.html"
+                    >Canon MG2570S</a
+                  >
+                  <img
+                    src="/images/printers/canon-mg2570s-3-in-1-multi-function-inkjet-color-printer.png"
+                    alt="Canon printer"
+                  />
+                </div>
+                <div class="section-entry">
+                  <a
+                    href="/pages/product/hp-415-all-in-one-ink-tank-wireless-color-printer.html"
+                    >HP 415 All-in-One</a
+                  >
+                  <img
+                    src="/images/printers/hp-415-all-in-one-ink-tank-wireless-color-printer.png"
+                    alt="HP 415 All-in-One"
+                  />
+                </div>
+                <div class="section-entry">
+                  <a
+                    href="/pages/product/canon-pixma-g3020-3-in-1-wireless-multi-function-ink-tank-color-printer.html"
+                    >Canon Pixma G3020 3 in 1 Wireless</a
+                  >
+                  <img
+                    src="/images/printers/canon-pixma-g3020-3-in-1-wireless-multi-function-ink-tank-color-printer.png"
+                    alt="Canon printer"
+                  />
+                </div>
+                <a href="/pages/products.html" style="margin-top: 10px"
+                  >View All</a
+                >
+              </div>
+            </div>
+          </div>
+          <!--Links to research page-->
+          <a href="/pages/research.html" class="anchor">Research</a>
+          <div class="link-entry">
+            <!-- Links to about us page-->
+            <a href="/pages/about-us.html" class="anchor">About Us</a>
+            <div class="link-hover-container">
+              <div class="link-hover-div">
+                <div class="section-entry">
+                  <a href="/pages/about-us.html#meet-the-team">Meet the team</a>
+                  <img
+                    src="/images/navbar/about-us-our-team.png"
+                    alt="About Us - Team"
+                  />
+                </div>
+                <div class="section-entry">
+                  <a href="/pages/about-us.html#our-story">Our story</a>
+                  <img
+                    src="/images/navbar/about-us-story.png"
+                    alt="About Us - Story"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+          <!--Links to about our company-->
+          <a href="/pages/about-our-company.html" class="anchor"
+            >About Our Company</a
+          ><!-- Links to Ink Finder-->
+          <a href="/pages/ink-finder.html" class="anchor">Ink Finder</a>
+        </div>
+      </div>
+    </header>
+
+    <!-- Content of the page -->
+    <main>
+      <div class="safe-margin">
+        <!-- Start from here -->
+        <div style="display: flex; gap: 20px; align-items: center">
+          <div style="flex: 1">
+            <!--Title-->
+            <h1 style="margin-bottom: 16px; font-size: 42px; font-weight: 500">
+              INK FINDER
+            </h1>
+            <!--Text-->
+            <p>
+              Introducing our Ink Finder – Your personalized solution to bring
+              color to life! Explore a vast palette of vibrant hues to match
+              your creative vision. Our user-friendly tool ensures you find the
+              perfect ink for every project. Whether it's bold and vibrant or
+              subtle and sophisticated, discover the power of precision with our
+              Ink Finder. Transform your prints into masterpieces effortlessly!
+              #InkFinderMagic #PrintColorful
+            </p>
+          </div>
+          <div style="flex: 1">
+            <!--img-->
+            <img
+              class="img_dvg"
+              src="../images/ink-finder/image.png"
+              alt="Ink finder image"
+              style="width: 100%; height: auto"
+            />
+          </div>
+        </div>
+      </div>
+      <hr style="margin-top: 20px" color="black" />
+      <div class="safe-margin">
+        <div
+          style="display: flex; gap: 16px; align-items: center; margin: 40px 0"
+        >
+          <div style="flex: 1">
+            <h1 style="margin-bottom: 16px; font-size: 17px; font-weight: 500">
+              Find by Printer
+            </h1>
+            <form
+              style="display: flex; flex-direction: column; gap: 16px"
+              name="printer-selector"
+            >
+              <div style="display: flex; flex-direction: column; gap: 8px">
+                <label for="search">Step 1: Choose Printer series</label>
+                <select style="width: 70%" onchange="onSeriesChange(this)">
+                  <!-- IF printer not selected-->
+                  <option selected="selected" disabled>
+                    Please select a series
+                    <!-- Product -->
+                  </option>
+                  <option value="artisan">Artisan</option>
+                  <option value="disproducer">Disproducer</option>
+                  <option value="ecotank">EcoTank</option>
+                </select>
+              </div>
+              <div style="display: flex; flex-direction: column; gap: 8px">
+                <label for="search">Step 2: Choose Printer model</label>
+                <select
+                  style="width: 70%"
+                  name="model"
+                  onchange="printerSelected()"
+                >
+                  <!-- If Printer not selected-->
+                  <option selected="selected" disabled>
+                    Please select a printer series first
+                  </option>
+                </select>
+              </div>
+            </form>
+          </div>
+          <div style="border: black 1.5px solid; align-self: stretch"></div>
+
+          <div
+            style="
+              flex: 1;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+            "
+          >
+            <div id="ink-name">Please select a printer series and model</div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <!-- Footer -->
+    <footer>
+      <div class="safe-margin content">
+        <!-- Logo + Links -->
+        <div class="logo-bar">
+          <div class="logo">
+            <img src="/images/logo.png" width="50" height="50" alt="Logo" />
+            <p style="font-size: 0.8em">S3 Printers</p>
+          </div>
+          <div class="links">
+            <p style="font-weight: 700">Links</p>
+            <div style="display: flex; gap: 42px">
+              <ul style="list-style: none">
+                <li><a href="/">Home</a></li>
+                <li><a href="/pages/blog.html">Blog</a></li>
+                <li><a href="/pages/products.html">Products</a></li>
+                <li><a href="/pages/research.html">Research</a></li>
+              </ul>
+              <ul style="list-style: none">
+                <li><a href="/pages/about-us.html">About Us</a></li>
+                <li>
+                  <a href="/pages/about-our-company.html">About Our Company</a>
+                </li>
+                <li><a href="/pages/ink-finder.html">Ink Finder</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="email">
+            <p
+              style="
+                font-weight: 700;
+                display: flex;
+                align-items: center;
+                gap: 8px;
+              "
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                height="16"
+                width="16"
+                viewBox="0 0 512 512"
+                fill="#003366"
+              >
+                <!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+                <path
+                  d="M48 64C21.5 64 0 85.5 0 112c0 15.1 7.1 29.3 19.2 38.4L236.8 313.6c11.4 8.5 27 8.5 38.4 0L492.8 150.4c12.1-9.1 19.2-23.3 19.2-38.4c0-26.5-21.5-48-48-48H48zM0 176V384c0 35.3 28.7 64 64 64H448c35.3 0 64-28.7 64-64V176L294.4 339.2c-22.8 17.1-54 17.1-76.8 0L0 176z"
+                />
+              </svg>
+              Stay up to date on the latest from S3 printers
+            </p>
+            <!--Gmail form-->
+            <form onsubmit="return newsletterSignup()">
+              <input
+                class="email-input"
+                placeholder="Enter your email address"
+                type="email"
+                required
+              />
+              <button class="btn-submit">Sign Up</button>
+            </form>
+          </div>
+        </div>
+        <!-- Copyright info -->
+        <div style="display: flex; justify-content: center">
+          <p style="font-size: 11px">
+            &copy; 2023-2024 S3 Printers | All Rights Reserved
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      function onSeriesChange(seriesElement) {
+        var selectedSeries = seriesElement.value;
+        var modelSelectElement = document.forms["printer-selector"]["model"];
+
+        var models = [
+          '<option selected="selected" disabled>Please select a printer model</option>',
+        ];
+
+        switch (selectedSeries) {
+          /* Selected Prnter Model attributes*/
+          case "artisan":
+            models.push(
+              '<option value="1430">Artisan 1430 Inkjet Printer Certified ReNew</option>'
+            );
+            models.push(
+              '<option value="50">Artisan 50 Inkjet Printer</option>'
+            );
+            models.push(
+              '<option value="50-renew">Artisan 50 Inkjet Printer - Certified ReNew</option>'
+            );
+            break;
+          case "disproducer":
+            models.push(
+              '<option value="autoprinter">Disproducer Autoprinter</option>'
+            );
+            models.push(
+              '<option value="blu-ray">Disproducer Blu-ray 50 Disc Publisher (PP-50BD)</option>'
+            );
+            models.push(
+              '<option value="network">Disproducer Network Disc Publisher</option>'
+            );
+            break;
+          case "ecotank":
+            models.push(
+              '<option value="15000">EcoTank ET-15000 All-in-One</option>'
+            );
+            models.push(
+              '<option value="15000-renew">EcoTank ET-15000 All-in-One - Certified ReNew</option>'
+            );
+            models.push(
+              '<option value="2400">EcoTank ET-2400 All-in-One Printer</option>'
+            );
+            break;
+        }
+        modelSelectElement.innerHTML = models.join();
+      }
+
+      function printerSelected() {
+        var modelSelected = document.forms["printer-selector"]["model"].value;
+        var inkNameDiv = document.getElementById("ink-name");
+        /*Sets the content of ink*/
+        switch (modelSelected) {
+          case "1430":
+            inkNameDiv.innerHTML = `Epson 79, Black Ink Cartridge, High Capacity-79
+Epson 79, Cyan Ink Cartridge, High Capacity - 79
+Epson 79, Magenta Ink Cartridge, High Capacity - 79
+Epson 79, Yellow Ink Cartridge, High Capacity- 79
+Epson 79, Light Cyan Ink Cartridge, High Capacity-79
+Epson 79, Light Magenta Ink Cartridge, High Capacity-79`;
+            break;
+          case "50":
+            inkNameDiv.innerHTML = `Epson 77, Black Ink Cartridge, High Capacity-77
+Epson 77, Cyan Ink Cartridge, High Capacity - 77
+Epson 77, Magenta Ink Cartridge, High Capacity - 77
+Epson 77, Yellow Ink Cartridge, High Capacity- 77
+Epson 77, Light Cyan Ink Cartridge, High Capacity-77
+Epson 77, Light Magenta Ink Cartridge, High Capacity-77`;
+            break;
+          case "50-renew":
+            inkNameDiv.innerHTML = `Epson 77, Cyan Ink Cartridge, High Capacity - 77
+Epson 77, Magenta Ink Cartridge, High Capacity - 77
+Epson 77, Yellow Ink Cartridge, High Capacity- 77
+Epson 77, Light Cyan Ink Cartridge, High Capacity-77
+Epson 77, Light Magenta Ink Cartridge, High Capacity-77`;
+            break;
+          case "autoprinter":
+            inkNameDiv.innerHTML = `Epson Discproducer Cartridges - Cyan- C13S020447
+Epson Discproducer Cartridges - Light Cyan - C13S020448
+Epson Discproducer Cartridges - Light Magenta - C13S020449
+Epson Discproducer Cartridges - Magenta - C13S020450
+Epson Discproducer Cartridges - Yellow - C13S020451
+Epson Discproducer Cartridges - Black - C13S020452`;
+            break;
+          case "blu-ray":
+            inkNameDiv.innerHTML = `Epson Discproducer Cartridges - Cyan - C13S020447
+Epson Discproducer Cartridges - Light Cyan - C13S020448
+Epson Discproducer Cartridges - Light Magenta - C13S020449
+Epson Discproducer Cartridges - Magenta - C13S020450
+Epson Discproducer Cartridges - Yellow - C13S020451
+Epson Discproducer Cartridges - Black - C13S020452`;
+            break;
+          case "network":
+            inkNameDiv.innerHTML = `Epson Discproducer Cartridges - Cyan - C13S020447
+Epson Discproducer Cartridges - Light Cyan - C13S012323
+Epson Discproducer Cartridges - Light Magenta - C13S012323
+Epson Discproducer Cartridges - Magenta - C13S012323
+Epson Discproducer Cartridges - Yellow - C13S012323
+Epson Discproducer Cartridges - Black - C13S012323`;
+            break;
+          case "15000":
+            inkNameDiv.innerHTML = `Epson 502, Black Ink Bottle - T502120-S
+Epson 502, Cyan Ink Bottle - T502220-S
+Epson 502, Magenta Ink Bottle - T502320-S
+Epson 502, Yellow Ink Bottle - T502420-S
+Epson 502, Multi-Color Ink Bottles, C/M/Y 3-Pack - T502520-S`;
+            break;
+          case "15000-renew":
+            inkNameDiv.innerHTML = `Epson 502, Black Ink Bottle - T502120-S
+Epson 502, Cyan Ink Bottle - T502222-S
+Epson 502, Magenta Ink Bottle - T502322-S
+Epson 502, Yellow Ink Bottle - T502422-S
+Epson 502, Multi-Color Ink Bottles, C/M/Y 3-Pack - T502522-S`;
+            break;
+          case "2400":
+            inkNameDiv.innerHTML = `Epson 502, Black Ink Bottle - T522120-S
+Epson 502, Cyan Ink Bottle - T522220-S
+Epson 502, Magenta Ink Bottle - T522320-S
+Epson 502, Yellow Ink Bottle - T522420-S
+Epson 502, Multi-Color Ink Bottles, C/M/Y 3-Pack - T522520-S`;
+            break;
+        }
+
+        return false;
+      }
+    </script>
+
+    <!-- Additional scripts: DO NOT DELETE! -->
+    <script src="../scripts/header.js"></script>
+    <script src="../scripts/footer.js"></script>
+  </body>
+</html>

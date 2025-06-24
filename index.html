@@ -1,0 +1,642 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <title>S3 Printers</title>
+    <meta
+      name="description"
+      content="S3 Printers is a reputable and experienced printer, specializing and experienced printer"
+    />
+    <meta name="keywords" content="Printers" />
+    <meta name="author" content="S3 Printers" />
+
+    <style>
+      /* Sale banner */
+
+      .top-sale {
+        position: relative;
+      }
+
+      .top-sale .info-div {
+        color: white;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+      }
+
+      .top-sale .info-div .heading {
+        font-size: 32px;
+        font-weight: bold;
+        text-transform: uppercase;
+        line-height: 34px;
+      }
+
+      .top-sale .info-div .subheading {
+        font-size: 15px;
+        font-weight: 600;
+      }
+
+      .top-sale .info-div .body {
+        font-size: 14px;
+      }
+
+      /* Products showcase */
+
+      .products-showcase {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 100px 64px;
+      }
+
+      .products-showcase .product {
+        padding: 24px;
+        display: flex;
+        flex-direction: column;
+        gap: 6px;
+        padding-bottom: 130px;
+        align-self: baseline;
+        background-color: #f4f4f4;
+        transition: background-color 0.1s linear, box-shadow 0.2s linear,
+          transform 0.2s linear;
+        height: 240px;
+      }
+
+      .products-showcase .product:hover {
+        background-color: #cce5ff;
+        box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.1);
+        transform: translate(-8px, -8px);
+      }
+
+      .products-showcase .product:hover .preview-image-div {
+        scale: 1.1;
+      }
+
+      .products-showcase .product.all-products {
+        padding-bottom: 24px;
+      }
+
+      .products-showcase .product .name {
+        font-size: 22px;
+        font-weight: 500;
+      }
+
+      .products-showcase .product .name:hover {
+        text-decoration: underline;
+      }
+
+      .products-showcase .product .info {
+        font-size: 12px;
+      }
+
+      .products-showcase .product .preview-image-div {
+        position: relative;
+        width: 100%;
+        transition: scale 0.2s linear;
+      }
+
+      .products-showcase .product .preview-image {
+        position: absolute;
+        right: -70px;
+        top: -26px;
+      }
+
+      .products-showcase .product .btn-shop {
+        text-decoration: none;
+        display: inline-block;
+      }
+
+      .products-showcase .product .btn-shop::after {
+        content: "";
+        display: block;
+        width: 0; /* Hide border initially */
+        height: 2px;
+        background: var(--primary-color);
+        transition: width 0.3s ease;
+      }
+      .products-showcase .product:hover .btn-shop::after {
+        width: 100%; /* Show border on hover */
+      }
+
+      /* Banner 2 */
+
+      .banner-2 {
+        color: white;
+        position: relative;
+      }
+
+      .banner-2 .content-div {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+      }
+
+      .banner-2 .content {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        justify-content: flex-end;
+        align-items: center;
+        height: 100%;
+      }
+
+      .banner-2 .content .body {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+      }
+
+      .banner-2 .content .body .banner-title {
+        font-size: 28px;
+        font-weight: 500;
+      }
+
+      .banner-2 .content .body .banner-info {
+        font-size: 14px;
+      }
+
+      /* Banner 3 */
+
+      .banner-3 {
+        position: relative;
+      }
+
+      .banner-3 .content-div {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+      }
+
+      .banner-3 .content {
+        display: grid;
+        grid-template-columns: 0.65fr 0.35fr;
+        justify-content: flex-end;
+        align-items: center;
+        height: 100%;
+      }
+
+      .banner-3 .content .body {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+      }
+
+      .banner-3 .content .body .banner-title {
+        font-size: 28px;
+        font-weight: 500;
+      }
+
+      .banner-3 .content .body .banner-info {
+        font-size: 14px;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Header -->
+    <header>
+      <!-- Sale banner -->
+      <div style="background-color: #db133b">
+        <div class="safe-margin sale-banner">
+          <p class="sale-title">Print Perfection Sale</p>
+          <p class="info">
+            Limitless Creativity with Our Printer Extravaganza! Unbeatable Deals
+            Await – Elevate Your Printing Experience Today. Hurry, It's Printer
+            Perfection at Prices You Can't Resists! 🖨️✨ #PrintPerfectionSale
+          </p>
+          <a href="/pages/products.html">
+            <div class="shop-btn">
+              <p>Shop</p>
+            </div>
+          </a>
+          <div class="counter">
+            <div class="entry">
+              <p id="sale-countdown-hours">20</p>
+              <p class="unit">HRS</p>
+            </div>
+            <p class="sep">:</p>
+            <div class="entry">
+              <p id="sale-countdown-minutes">28</p>
+              <p class="unit">MIN</p>
+            </div>
+            <p class="sep">:</p>
+            <div class="entry">
+              <p id="sale-countdown-seconds">35</p>
+              <p class="unit">SEC</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Navigation bar -->
+      <div class="safe-margin navigation-bar">
+        <a href="/"
+          ><img src="/images/logo.png" width="50" height="50" alt="Logo"
+        /></a>
+
+        <div class="links">
+          <div class="link-entry">
+            <a href="/" class="anchor">Home</a>
+            <div class="link-hover-container">
+              <div class="link-hover-div">
+                <div class="section-entry">
+                  <a href="/#massive-discounts">Massive discounts!</a>
+                  <img
+                    src="/images/navbar/homepage-massive-discounts.png"
+                    alt="Massive discounts"
+                  />
+                </div>
+                <div class="section-entry">
+                  <a href="/#printers-for-home-and-office"
+                    >Printers for home and office</a
+                  >
+                  <img
+                    src="/images/printers/canon-mg2570s-3-in-1-multi-function-inkjet-color-printer.png"
+                    alt="Canon printer"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="link-entry">
+            <a href="/pages/blog.html" class="anchor">Blog</a>
+            <div class="link-hover-container">
+              <div class="link-hover-div">
+                <div class="section-entry">
+                  <a href="/pages/blogs/technology.html">Technology</a>
+                  <img
+                    src="/images/blog-page/technology.jpg"
+                    alt="Technology"
+                  />
+                </div>
+                <div class="section-entry">
+                  <a href="/pages/blogs/positive-effects-of-technology.html"
+                    >Positive Effects of technology</a
+                  >
+                  <img
+                    src="/images/blog-page/positive-impact-of-technology.png"
+                    alt="Positive Impact of technology"
+                  />
+                </div>
+                <div class="section-entry">
+                  <a href="/pages/blogs/negative-effects-of-technology.html"
+                    >Negative Effects of technology</a
+                  >
+                  <img
+                    src="/images/blog-page/negative-impacts-of-tecchnology.jpg"
+                    alt="Negative Impacts of technology"
+                  />
+                </div>
+                <a href="/pages/blog.html" style="margin-top: 10px">View All</a>
+              </div>
+            </div>
+          </div>
+          <div class="link-entry">
+            <a href="/pages/products.html" class="anchor">Products</a>
+            <div class="link-hover-container">
+              <div class="link-hover-div">
+                <div class="section-entry">
+                  <a
+                    href="/pages/product/canon-mg2570s-3-in-1-multi-function-inkjet-color-printer.html"
+                    >Canon MG2570S</a
+                  >
+                  <img
+                    src="/images/printers/canon-mg2570s-3-in-1-multi-function-inkjet-color-printer.png"
+                    alt="Canon printer"
+                  />
+                </div>
+                <div class="section-entry">
+                  <a
+                    href="/pages/product/hp-415-all-in-one-ink-tank-wireless-color-printer.html"
+                    >HP 415 All-in-One</a
+                  >
+                  <img
+                    src="/images/printers/hp-415-all-in-one-ink-tank-wireless-color-printer.png"
+                    alt="HP 415 All-in-One"
+                  />
+                </div>
+                <div class="section-entry">
+                  <a
+                    href="/pages/product/canon-pixma-g3020-3-in-1-wireless-multi-function-ink-tank-color-printer.html"
+                    >Canon Pixma G3020 3 in 1 Wireless</a
+                  >
+                  <img
+                    src="/images/printers/canon-pixma-g3020-3-in-1-wireless-multi-function-ink-tank-color-printer.png"
+                    alt="Canon printer"
+                  />
+                </div>
+                <a href="/pages/products.html" style="margin-top: 10px"
+                  >View All</a
+                >
+              </div>
+            </div>
+          </div>
+          <a href="/pages/research.html" class="anchor">Research</a>
+          <div class="link-entry">
+            <a href="/pages/about-us.html" class="anchor">About Us</a>
+            <div class="link-hover-container">
+              <div class="link-hover-div">
+                <div class="section-entry">
+                  <a href="/pages/about-us.html#meet-the-team">Meet the team</a>
+                  <img
+                    src="/images/navbar/about-us-our-team.png"
+                    alt="About Us - Team"
+                  />
+                </div>
+                <div class="section-entry">
+                  <a href="/pages/about-us.html#our-story">Our story</a>
+                  <img
+                    src="/images/navbar/about-us-story.png"
+                    alt="About Us - Story"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+          <a href="/pages/about-our-company.html" class="anchor"
+            >About Our Company</a
+          >
+          <a href="/pages/ink-finder.html" class="anchor">Ink Finder</a>
+        </div>
+      </div>
+    </header>
+
+    <!-- Content of the page -->
+    <main>
+      <!-- Sale Banner -->
+      <div class="top-sale" id="massive-discounts">
+        <img
+          src="./images/homepage/home-banner.png"
+          alt="Home banner"
+          style="width: 100%"
+        />
+        <div class="info-div">
+          <div class="safe-margin">
+            <div style="display: flex; flex-direction: column; gap: 4px">
+              <p class="subheading">Massive discounts!</p>
+              <p class="heading">Print Perfection<br />Sale</p>
+              <p class="body" style="margin-bottom: 18px">
+                Buy direct from us to enjoy this grand offer.
+              </p>
+            </div>
+            <a href="/pages/products.html" class="btn btn-bg-white">Shop</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Products showcase -->
+      <center><h1 class="title">Printers for home and office</h1></center>
+      <div
+        class="products-showcase safe-margin"
+        style="margin-bottom: 100px"
+        id="printers-for-home-and-office"
+      >
+        <div class="product">
+          <a
+            href="/pages/product/canon-mg2570s-3-in-1-multi-function-inkjet-color-printer.html"
+            class="name"
+            >Canon MG2570S</a
+          >
+          <p class="info">3 In 1 Multi-Function Inkjet Color Printer</p>
+          <a
+            href="/pages/product/canon-mg2570s-3-in-1-multi-function-inkjet-color-printer.html"
+            class="btn btn-bg-transparent btn-shop"
+            style="margin-top: 6px"
+            >Shop</a
+          >
+          <div class="preview-image-div" style="transform: translateY(30px)">
+            <img
+              src="./images/printers/canon-mg2570s-3-in-1-multi-function-inkjet-color-printer.png"
+              class="preview-image"
+              width="250"
+              alt="Canon MG2570s"
+            />
+          </div>
+        </div>
+        <div class="product">
+          <a
+            href="/pages/product/hp-415-all-in-one-ink-tank-wireless-color-printer.html"
+            class="name"
+            >HP 415 All-in-One</a
+          >
+          <p class="info">All-in-One Ink Tank Wireless Color Printer</p>
+          <a
+            href="/pages/product/hp-415-all-in-one-ink-tank-wireless-color-printer.html"
+            class="btn btn-bg-transparent btn-shop"
+            style="margin-top: 6px"
+            >Shop</a
+          >
+          <div class="preview-image-div" style="transform: translateY(20px)">
+            <img
+              src="./images/printers/hp-415-all-in-one-ink-tank-wireless-color-printer.png"
+              alt="HP 415 All "
+              class="preview-image"
+              width="250"
+              alt="HP 415 All in One"
+            />
+          </div>
+        </div>
+        <div class="product">
+          <a
+            href="/pages/product/canon-pixma-g3020-3-in-1-wireless-multi-function-ink-tank-color-printer.html"
+            class="name"
+            >Canon Pixma G3020 3 in 1 Wireless</a
+          >
+          <p class="info">Multi-Function Ink Tank Colour Printer</p>
+          <a
+            href="/pages/product/canon-pixma-g3020-3-in-1-wireless-multi-function-ink-tank-color-printer.html"
+            class="btn btn-bg-transparent btn-shop"
+            style="margin-top: 6px"
+            >Shop</a
+          >
+          <div class="preview-image-div" style="transform: translateY(-10px)">
+            <img
+              src="./images/printers/canon-pixma-g3020-3-in-1-wireless-multi-function-ink-tank-color-printer.png"
+              class="preview-image"
+              width="250"
+              alt="Canon Pixma G3020"
+            />
+          </div>
+        </div>
+        <div class="product">
+          <a
+            href="/pages/product/pantum-p2500w-wireless-laser-printer.html"
+            class="name"
+            >PANTUM P2500W Wireless Laser Printer</a
+          >
+          <p class="info">
+            Printer for Office & Home Use Black and White Printer with Mobile
+            Printing
+          </p>
+          <a
+            href="/pages/product/pantum-p2500w-wireless-laser-printer.html"
+            class="btn btn-bg-transparent btn-shop"
+            style="margin-top: 6px"
+            >Shop</a
+          >
+          <div class="preview-image-div">
+            <img
+              src="./images/printers/pantum-p2500w-wireless-laser-printer.png"
+              class="preview-image"
+              width="250"
+              alt="Pantum P2500W"
+            />
+          </div>
+        </div>
+        <div class="product">
+          <a href="/pages/product/epson-eco-tank-l3210.html" class="name"
+            >Epson Eco Tank L3210</a
+          >
+          <p class="info">All-in-One Ink Tank Printer</p>
+          <a
+            href="/pages/product/epson-eco-tank-l3210.html"
+            class="btn btn-bg-transparent btn-shop"
+            style="margin-top: 6px"
+            >Shop</a
+          >
+          <div class="preview-image-div" style="transform: translateY(50px)">
+            <img
+              src="./images/printers/epson-eco-tank-l3210.png"
+              class="preview-image"
+              width="250"
+              alt="Epson Eco Tank"
+            />
+          </div>
+        </div>
+        <!-- View all printers -->
+        <div class="product all-products">
+          <a href="/pages/products.html" class="name">View All Printers</a>
+          <img src="./images/homepage/all-products.png" alt="All Products" />
+        </div>
+      </div>
+
+      <!-- Banner 2 -->
+      <div class="banner-2" style="margin-bottom: -5px">
+        <img
+          src="./images/homepage/home-banner-02.png"
+          alt="Banner 2"
+          style="width: 100%"
+        />
+        <div class="content-div">
+          <div class="safe-margin content">
+            <div style="grid-column-start: 2" class="body">
+              <p class="banner-title">Discover Innovation in Every Print</p>
+              <p class="banner-info">
+                Elevate your printing experience with the latest in technology
+                and precision. Explore our premium selection of printers
+                designed to bring your ideas to life. Quality meets innovation –
+                Your perfect print journey starts here. 🖨️✨ #PrintInnovation
+              </p>
+              <a href="/pages/products.html" class="btn btn-bg-white">Shop</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Banner 3 -->
+      <div class="banner-3" style="margin-bottom: -5px">
+        <img
+          src="./images/homepage/ink-banner.png"
+          alt="Banner 3"
+          style="width: 100%"
+        />
+        <div class="content-div">
+          <div class="safe-margin content">
+            <div class="body" style="margin-bottom: 75px">
+              <p class="banner-title">Discover Innovation in Every Print</p>
+              <p class="banner-info">
+                Elevate your printing experience with the latest in technology
+                and precision. Explore our premium selection of printers
+                designed to bring your ideas to life. Quality meets innovation –
+                Your perfect print journey starts here. 🖨️✨ #PrintInnovation
+              </p>
+              <a href="/pages/ink-finder.html" class="btn btn-bg-white"
+                >Visit Ink Finder</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+      <div class="safe-margin content">
+        <!-- Logo + Links -->
+        <div class="logo-bar">
+          <div class="logo">
+            <img src="/images/logo.png" width="50" height="50" alt="Logo" />
+            <p style="font-size: 0.8em">S3 Printers</p>
+          </div>
+          <div class="links">
+            <p style="font-weight: 700">Links</p>
+            <div style="display: flex; gap: 42px">
+              <ul style="list-style: none">
+                <li><a href="/">Home</a></li>
+                <li><a href="/pages/blog.html">Blog</a></li>
+                <li><a href="/pages/products.html">Products</a></li>
+                <li><a href="/pages/research.html">Research</a></li>
+              </ul>
+              <ul style="list-style: none">
+                <li><a href="/pages/about-us.html">About Us</a></li>
+                <li>
+                  <a href="/pages/about-our-company.html">About Our Company</a>
+                </li>
+                <li><a href="/pages/ink-finder.html">Ink Finder</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="email">
+            <p
+              style="
+                font-weight: 700;
+                display: flex;
+                align-items: center;
+                gap: 8px;
+              "
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                height="16"
+                width="16"
+                viewBox="0 0 512 512"
+                fill="#003366"
+              >
+                <!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+                <path
+                  d="M48 64C21.5 64 0 85.5 0 112c0 15.1 7.1 29.3 19.2 38.4L236.8 313.6c11.4 8.5 27 8.5 38.4 0L492.8 150.4c12.1-9.1 19.2-23.3 19.2-38.4c0-26.5-21.5-48-48-48H48zM0 176V384c0 35.3 28.7 64 64 64H448c35.3 0 64-28.7 64-64V176L294.4 339.2c-22.8 17.1-54 17.1-76.8 0L0 176z"
+                />
+              </svg>
+              Stay up to date on the latest from S3 printers
+            </p>
+            <form onsubmit="return newsletterSignup()">
+              <input
+                class="email-input"
+                placeholder="Enter your email address"
+                type="email"
+                required
+              />
+              <button class="btn-submit">Sign Up</button>
+            </form>
+          </div>
+        </div>
+        <!-- Copyright info -->
+        <div style="display: flex; justify-content: center">
+          <p style="font-size: 11px">
+            &copy; 2023-2024 S3 Printers | All Rights Reserved
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Additional scripts: DO NOT DELETE! -->
+    <script src="./scripts/header.js"></script>
+    <script src="./scripts/footer.js"></script>
+  </body>
+</html>
